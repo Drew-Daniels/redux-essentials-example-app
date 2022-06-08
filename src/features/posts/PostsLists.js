@@ -4,7 +4,6 @@ import { TimeAgo } from './TimeAgo'
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { 
-  selectAllPosts, 
   fetchPosts,
   selectPostIds,
   selectPostById
@@ -34,7 +33,6 @@ let PostExcerpt = ({ postId }) => {
 export const PostsLists = () => {
     const dispatch = useDispatch();
     const orderedPostIds = useSelector(selectPostIds)
-    const posts = useSelector(selectAllPosts);
     const postStatus = useSelector(state => state.posts.status);
     const error = useSelector(state => state.posts.error);
 
